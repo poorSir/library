@@ -66,6 +66,7 @@ public class MyViewPagerAdapter<T> extends PagerAdapter {
 
     @Override
     public int getItemPosition(@NonNull Object object) {
+        //viewpager立即刷新页面
         if (list != null && list.size() == 0) {
             return POSITION_NONE;
         }

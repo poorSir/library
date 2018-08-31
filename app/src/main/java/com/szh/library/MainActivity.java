@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        viewPager = findViewById(R.id.ninePages);
+       //数据初始化
         List<List<TestEntity>> lists = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             List<TestEntity> list1 = new ArrayList<>();
@@ -37,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
             }
             lists.add(list1);
         }
+        //设置不每页重复加载
         viewPager.setEveryRequest(false);
+        //设置分页
         viewPager.setPagingLoad(true);
         viewPager.setListener(new RequestDataListener<TestEntity>() {
             @Override
-            public void request(int position) {
+            public void request(int position) {//分页加载
                 List<TestEntity> changeList =new ArrayList<>();
                 for (int i = 0; i < 9; i++) {
                     TestEntity testEntity = new TestEntity();
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public int gridViewColumn() {
+            public int gridViewColumn() {//gridview列数
                 return 3;
             }
 

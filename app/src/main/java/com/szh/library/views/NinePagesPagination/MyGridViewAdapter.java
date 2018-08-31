@@ -50,11 +50,13 @@ public class MyGridViewAdapter<T> extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = listener.getView(inflater,position,convertView,parent,list);
         int width;
+        //计算item的宽
         if(listener != null &listener.gridViewColumn() != 0){
              width = parent.getWidth()/listener.gridViewColumn();
         }else{
              width = parent.getWidth()/3;
         }
+        //设置item的宽高相等
         convertView.setLayoutParams(new AbsListView.LayoutParams(width,width));
         return convertView;
     }
