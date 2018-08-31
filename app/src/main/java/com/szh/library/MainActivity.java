@@ -21,12 +21,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    private NinePagesPagination viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        NinePagesPagination viewPager = findViewById(R.id.ninePages);
+       viewPager = findViewById(R.id.ninePages);
         List<List<TestEntity>> lists = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             List<TestEntity> list1 = new ArrayList<>();
@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setPagingLoad(true);
         viewPager.setListener(new RequestDataListener<TestEntity>() {
             @Override
-            public List<TestEntity> request() {
+            public void request(int position) {
                 List<TestEntity> changeList =new ArrayList<>();
                 for (int i = 0; i < 9; i++) {
                     TestEntity testEntity = new TestEntity();
                     testEntity.setText("change" + i);
                     changeList.add(testEntity);
                 }
-                return changeList;
+                viewPager.dataInvalidate(position,changeList);
             }
 
             @Override

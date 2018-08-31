@@ -99,17 +99,12 @@ public class NinePagesPagination<T> extends LinearLayout {
                 if (isPagingLoad) {//分页加载
                     if (isEveryRequest) {//每次都请求
                         adapter.setCurrentPosition(position);
-                        List<T> changeList = listener.request();
-                        list.set(position, changeList);
-                        adapter.notifyDataSetChanged();
+                        listener.request(position);
                     } else {//请求过一次将不在重复请求
                         if (!hasAdded.contains(position)) {
                             hasAdded.add(position);
                             adapter.setCurrentPosition(position);
-                            List<T> changeList = listener.request();
-                            System.out.println(changeList.size());
-                            list.set(position, changeList);
-                            adapter.notifyDataSetChanged();
+                            listener.request(position);
                         }
                     }
                 }
@@ -124,5 +119,9 @@ public class NinePagesPagination<T> extends LinearLayout {
             }
         });
     }
-
+    //数据刷新
+    public void dataInvalidate(int position,List<T> changeList){
+        list.set(position, changeList);
+        adapter.notifyDataSetChanged();
+    }
 }

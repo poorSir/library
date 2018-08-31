@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 public interface RequestDataListener<T> {
-    List<T> request();
+   void request(int position);
     //gridView列数
     int gridViewColumn();
     View getView(LayoutInflater inflater, int position, View convertView, ViewGroup parent,List<T> list);
