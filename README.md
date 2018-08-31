@@ -1,10 +1,10 @@
-¹¤¾ß¿â
-utils:¹¤¾ß
-	androidSystem  	°²×¿ÏµÍ³µÄ¹¤¾ß
-	develop  		ÎªÁË¿ª·¢·½±ãµÄ¹¤¾ß
-	text 			¹ØÓÚÎÄ±¾ÊıÖµµÄ¹¤¾ß
-views£º×Ô¶¨Òå¿Ø¼ş
-	barrage 				µ¯Ä»¿Ø¼ş
-	ninePagesPagination 	¾Å¹¬¸ñ¿É·ÖÒ³¼ÓÔØµÄ¿Ø¼ş
-	circleIndicator 		Ğ¡Ô²µãÖ¸Ê¾Æ÷
-	clearEditText 			´øÉ¾³ı°´Å¥µÄÊäÈë¿ò
+å·¥å…·åº“
+utils:å·¥å…·  
+	androidSystem  	å®‰å“ç³»ç»Ÿçš„å·¥å…·  
+	develop  		ä¸ºäº†å¼€å‘æ–¹ä¾¿çš„å·¥å…·  
+	text 			å…³äºæ–‡æœ¬æ•°å€¼çš„å·¥å…·  
+viewsï¼šè‡ªå®šä¹‰æ§ä»¶  
+	barrage 		å¼¹å¹•æ§ä»¶  
+	ninePagesPagination 	ä¹å®«æ ¼å¯åˆ†é¡µåŠ è½½çš„æ§ä»¶  
+	circleIndicator 	å°åœ†ç‚¹æŒ‡ç¤ºå™¨  
+	clearEditText 		å¸¦åˆ é™¤æŒ‰é’®çš„è¾“å…¥æ¡†  
