@@ -4,18 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-  <com.szh.library.views.NinePagesPagination.NinePagesPagination
-      android:id="@+id/ninePages"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
-  <com.szh.library.views.CircleIndicator
-      android:id="@+id/circleIndicator"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"/>
   <Button
       android:id="@+id/button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:visibility="gone"/>
+      android:visibility="visible"/>
 </LinearLayout>
